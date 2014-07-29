@@ -1,19 +1,18 @@
+body {
+  background-color: darkred;
+}
+
 .container {
   margin: 20px auto;
   width: 800px;
   padding: 0px 20px 20px 20px;
   border: 1px dotted black;
+  background-color: white;
 }
 
 .container h1 {
   font-size: 17pt;
 
-}
-
-#sign-out input {
-  border:none;
-  background:none;
-  font-weight: :bold;
 }
 
 nav {
@@ -26,7 +25,7 @@ nav .brand, nav .brand a {
   margin-left: 25px;
   font-size: 18pt;
   text-decoration: none;
-  color: #444;
+  color: lightgray;
   width: 60%;
   display: inline-block;
 }
@@ -43,7 +42,7 @@ nav li {
 }
 
 nav li a {
-  color: gray;
+  color: lightgray;
   text-decoration: none;
 }
 

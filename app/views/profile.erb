@@ -10,7 +10,7 @@
       <h4>Email</h4>
       <p><%= @current_user.email %></p>
       <h4>Joined</h4>
-      <p><%= @current_user.created_at.strftime("%c") %></p>
+      <p><%= @current_user.created_at.strftime("%D") %></p>
   </div>
   <div class="container">
       <h3>Active Meals</h3>
@@ -18,7 +18,7 @@
           <h4>Location</h4>
           <p><%= meal.location %></p>
           <h4>Date</h4>
-          <p><%= meal.date %></p>
+          <p><%= meal.date.strftime("%D") %></p>
           <h4>Comments</h4>
           <p><%= meal.comments %></p>
           <button><a href="/users/<%= meal.user_id %>">User</a></button><br><br><hr>
