@@ -39,6 +39,16 @@ get '/users/:id' do
   erb :profile
 end
 
+get '/users/update/:id' do
+  erb :update_profile
+end
+
+put '/users/:id' do
+  user = User.find(session[:id])
+  user.update_attributes(params[:user])
+  redirect '/users/:id'
+end
+
 post '/users' do
   # sign-up a new user
 

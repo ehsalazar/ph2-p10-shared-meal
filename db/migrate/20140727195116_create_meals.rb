@@ -1,6 +1,6 @@
-class CreateEvents < ActiveRecord::Migration
+class CreateMeals < ActiveRecord::Migration
   def change
-    create_table :events do |t|
+    create_table :meals do |t|
       t.string :location, :comments
       t.date :date
       t.boolean :active, default: false

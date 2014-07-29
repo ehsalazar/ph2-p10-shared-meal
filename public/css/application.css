@@ -79,3 +79,7 @@ form.quirks {
   margin-right: 20px;
   width: 200px;
 }
+
+button a {
+  text-decoration: none;
+}
