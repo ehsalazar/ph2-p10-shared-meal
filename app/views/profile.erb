@@ -1,0 +1,12 @@
+<% if current_user %>
+  <div class="container"><h3>Welcome <%= @current_user.name %></h3></div>
+  <div class="container">
+      <p>Email: <%= @current_user.email %>&nbsp;&nbsp;-&nbsp;&nbsp;Joined: <%= @current_user.created_at.strftime("%c") %><hr>
+  </div>
+<% else %>
+  <div class="container">
+      <p>User: <%= @user.name %></p>
+      <p>Bio: <%= @user.bio %></p>
+      <p>Joined: <%= @user.created_at.strftime("%c") %><hr>
+  </div>
+<% end %>
