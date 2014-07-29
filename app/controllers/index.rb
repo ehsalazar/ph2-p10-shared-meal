@@ -36,6 +36,7 @@ end
 
 get '/users/:id' do
   @user = User.find_by_id(params[:id])
+  @meals = Meal.all
   erb :profile
 end
 
@@ -62,4 +63,15 @@ post '/users' do
       redirect '/'
     end
   end
+end
+
+#----------- MEALS -----------
+
+get '/meals/:id' do
+  erb :meals
+end
+
+post '/meals/:id' do
+  Meal.create(params[:meal])
+  redirect '/users/:id'
 end
