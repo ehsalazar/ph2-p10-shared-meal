@@ -44,6 +44,11 @@ get '/users/update/:id' do
   erb :update_profile
 end
 
+get '/users/all' do
+  @users = User.all
+  erb :users_all
+end
+
 put '/users/:id' do
   user = User.find(session[:id])
   user.update_attributes(params[:user])
@@ -72,6 +77,8 @@ get '/meals/:id' do
 end
 
 post '/meals/:id' do
-  Meal.create(params[:meal])
+  p session[:id]
+  meal = Meal.create(params[:meal])
+  meal.update_attributes(user_id: session[:id], active: true)
   redirect '/users/:id'
 end
