@@ -1,5 +1,5 @@
 body {
-  background: url(../images/cherries.jpg) no-repeat center center fixed;
+  background: url(../images/bacon.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -10,9 +10,10 @@ body {
 .container {
   margin: 20px auto;
   width: 80%;
-  padding: 0px 20px 20px 20px;
-  border: 1px dotted black;
+  padding: 20px;
+  /*border: 1px dotted black;*/
   background-color: white;
+  opacity: 0.7;
 }
 
 .container h1 {
@@ -84,6 +85,10 @@ form.quirks {
   width: 200px;
 }
 
+button {
+  background-color: darkred;
+}
 button a {
   text-decoration: none;
+  color: white;
 }
