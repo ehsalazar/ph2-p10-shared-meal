@@ -2,7 +2,7 @@ $(document).ready(function() {
   ChangeIt();
 });
 
-var totalCount = 5;
+var totalCount = 10;
 function ChangeIt()
 {
 var num = Math.ceil( Math.random() * totalCount );
