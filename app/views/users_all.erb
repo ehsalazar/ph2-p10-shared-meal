@@ -1,0 +1,15 @@
+<div class='container'>
+  <h3>Active Diner</h3>
+  <% @users.each do |user| %>
+    <h3>Diner</h3>
+    <button><a href="/users/<%= user.id %>"><%= user.name %></a></button>
+    <h3>Bio</h3>
+    <p><%= user.bio %></p>
+    <h3>Active Meals</h3>
+    <p><%= user.meals %></p>
+    <h3>Joined</h3>
+    <p><%= user.created_at.strftime("%D") %></p><hr>
+  <% end %>
+</div>
+
+

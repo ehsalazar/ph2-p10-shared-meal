@@ -1,0 +1,24 @@
+<% if current_user %>
+  <div class="container"><h1>Welcome <%= @current_user.name %></h1></div>
+  <div class="container">
+      <form id="sign-up" method="post" action="/meals/:id">
+        <h3>Location</h3>
+        <input type='text' name='meal[location]' placeholder='' size='49'>
+        <h3>Date</h3>
+        <input type='text' name='meal[date]' placeholder='' size='49'>
+        <h3>Time</h3>
+        <input type='text' name='meal[time]' placeholder='' size='49'>
+        <h3>Comments</h3>
+        <textarea name='meal[comments]' placeholder='' cols='50' rows='5'></textarea><br><br>
+        <input type='hidden' name='meal[user_id]' value='<%= session.id %>'>
+        <input type="submit" value="Create Meal">
+        <button><a href="/users/<%= @current_user.id %>">Cancel</a></button>
+      </form>
+  </div>
+<% else %>
+  <div class="container">
+      <p>User: <%= @user.name %></p>
+      <p>Bio: <%= @user.bio %></p>
+      <p>Joined: <%= @user.created_at.strftime("%c") %><hr>
+  </div>
+<% end %>

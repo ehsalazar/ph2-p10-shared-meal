@@ -1,30 +1,47 @@
-> **Note**: This branch (master) contains a skeleton without any app code, perfect for creating a _new_ application or challenge. If you're looking for an example app built with this skeleton, take a look at the [example](/../..//tree/example) branch which includes basic CRUD and RSpec tests.
+## Welcome to Shared Meal
 
-### Purpose
-The Sinatra Skeleton:
+Shared Meal is a place to connect with others, break bread and share a meal.
 
-1. Provides a foundation for building challenges or creating a new Sinatra application.
-2. Demonstrates a reasonable set of practices around building Sinatra applications.
-3. Eases the transition to Rails for Dev Bootcamp students
+If you're out dining on your own, why not post a meal? A fellow user can see who'll be dining in their area and join you.
 
-### Quickstart
+What connections or conversations can be built over the time of one meal? That's up to you. This is more about community and less about commitment.
 
-1.  `bundle install`
-2.  `shotgun config.ru`
+Share the empty seats at your table, be nice and split the bill (or ask for separate tabs).
 
-As needed, create models & migrations with the `rake` tasks:
 
-```
-rake generate:migration  # Create an empty migration in db/migrate, e.g., rake generate:migration NAME=create_tasks
-rake generate:model      # Create an empty model in app/models, e.g., rake generate:model NAME=User
-```
+### User Stories
 
-### Contributing
+  - A user can log into the site.
+  - A user can have and update a profile.
+  - A user can create a meal (event).
+  - A user can see a map with restaurants and bars within their general area.
+  - A user can see other user's profiles.
+  - A user can see active meals (events) within their general area.
+  - A meal (event) can include map information for a specific restaurant or bar.
+  - A meal (event) will close at a specified time (end of day of meal or otherwise specified by user).
 
-We would love for you to help make the skeleton more awesome, There are three ways to contribute:
 
-1. Ask for a bug fix or enhancement!
-2. Submit a pull request for a bug fix or enhancement!
-3. Code review an open pull request!
+### Database
 
-Be prepared to give and receive specific, actionable, and kind feedback!
+  - A user can have many meals (events).
+  - A meal (event) will be created by a single user.
+
+
+### MVP
+
+  - A user can log into the site.
+  - A user can have and update a profile.
+  - A user can create a meal (event).
+  - A user can see other user's profiles.
+  - A user can see active meals (events).
+
+
+### TODOs
+
+  - Need to include error handling.
+  - Need to continue CSS styling.
+  - Need to incorporate Google Maps API.
+    - A user can see active meals (events) within their general area.
+    - A meal (event) can include map information for a specific restaurant or bar.
+    - A meal (event) will close at a specified time (end of day of meal or otherwise specified by user).
+
