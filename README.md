@@ -34,3 +34,14 @@ Share the empty seats at your table, be nice and split the bill (or ask for sepa
   - A user can create a meal (event).
   - A user can see other user's profiles.
   - A user can see active meals (events).
+
+
+### TODOs
+
+  - Need to include error handling.
+  - Need to continue CSS styling.
+  - Need to incorporate Google Maps API.
+    - A user can see active meals (events) within their general area.
+    - A meal (event) can include map information for a specific restaurant or bar.
+    - A meal (event) will close at a specified time (end of day of meal or otherwise specified by user).
+
