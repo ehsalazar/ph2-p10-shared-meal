@@ -18,7 +18,9 @@
           <h4>Location</h4>
           <p><%= meal.location %></p>
           <h4>Date</h4>
-          <p><%= meal.date.strftime("%D") %></p>
+          <p><%= meal.date %></p>
+          <h4>Time</h4>
+          <p><%= meal.time %></p>
           <h4>Comments</h4>
           <p><%= meal.comments %></p>
           <button><a href="/users/<%= meal.user_id %>">User</a></button><br><br><hr>
