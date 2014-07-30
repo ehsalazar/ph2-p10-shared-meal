@@ -16,6 +16,8 @@ gem 'bcrypt'
 
 
 
+
+
 group :test do
   gem 'shoulda-matchers'
   gem 'rack-test'
@@ -27,4 +29,5 @@ group :test, :development do
   gem 'factory_girl'
   gem 'faker'
   gem 'shotgun'
+  gem 'dotenv'
 end
