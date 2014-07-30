@@ -14,7 +14,7 @@
       <p><%= @current_user.created_at.strftime("%D") %></p>
   </div>
   <div class="container">
-      <h3>Active Meals</h3>
+      <h2>Active Meals</h2>
        <% @meals.each do |meal| %>
           <h3>Location</h3>
           <p><%= meal.location %></p>

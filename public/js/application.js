@@ -1,7 +1,12 @@
 $(document).ready(function() {
-  // This is called after the document has loaded in its entirety
-  // This guarantees that any elements we bind to will exist on the page
-  // when we try to bind to them
-
-  // See: http://docs.jquery.com/Tutorials:Introducing_$(document).ready()
+  ChangeIt();
 });
+
+var totalCount = 5;
+function ChangeIt()
+{
+var num = Math.ceil( Math.random() * totalCount );
+document.body.background = '../images/'+num+'.jpg';
+document.body.attr('style', 'no-repeat center center fixed')
+}
+

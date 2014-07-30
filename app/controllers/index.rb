@@ -34,6 +34,11 @@ get '/users/new' do
   erb :sign_up
 end
 
+get '/users/all' do
+  @users = User.all
+  erb :users_all
+end
+
 get '/users/:id' do
   @user = User.find_by_id(params[:id])
   @meals = Meal.all
@@ -42,11 +47,6 @@ end
 
 get '/users/update/:id' do
   erb :update_profile
-end
-
-get '/users/all' do
-  @users = User.all
-  erb :users_all
 end
 
 put '/users/:id' do
