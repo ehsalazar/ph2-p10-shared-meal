@@ -1,6 +1,6 @@
 ## Welcome to Shared Meal
 
-Shared Meal is a place to connect with others, break bread and share a meal.
+[Shared Meal](http://murmuring-mesa-7178.herokuapp.com) is a place to connect with others, break bread and share a meal.
 
 If you're out dining on your own, why not post a meal? A fellow user can see who'll be dining in their area and join you.
 
@@ -38,6 +38,9 @@ Share the empty seats at your table, be nice and split the bill (or ask for sepa
 
 ### TODOs
 
+  - App has been deployed to Heroku, however:
+    - There are persistent "Internal Server Errors".
+    - Heroku logs indicate ActiveRecord timeouts after 5 seconds.
   - Need to include error handling.
   - Need to continue CSS styling.
   - Need to incorporate Google Maps API.
