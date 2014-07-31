@@ -8,15 +8,12 @@
   <div class="container">
       <h2>Active Meals</h2>
        <% @meals.each do |meal| %>
-          <h3>Location</h3>
-          <p><%= meal.location %></p>
-          <h3>Date</h3>
-          <p><%= meal.date %></p>
-          <h3>Time</h3>
-          <p><%= meal.time %></p>
-          <h3>Comments</h3>
+          <p><strong>Location: </strong><%= meal.location %><p>
+          <p><strong>Date: </strong><%= meal.date %><p>
+          <p><strong>Time: </strong><%= meal.time %><p>
+          <p><strong>Comments:</strong><p>
           <p><%= meal.comments %></p>
-          <h3>Diner</h3>
+          <p><strong>Diner:</strong></p>
           <button><a href="/users/<%= meal.user_id %>"><%= User.find(meal.user_id).name %></a></button><br><br><hr>
       <% end %>
   </div>
@@ -35,7 +32,7 @@
 <script type="text/javascript">
   function initialize() {
     var mapOptions = {
-      zoom: 15,
+      zoom: 16,
       center: new google.maps.LatLng(37.784, -122.397)
     };
     var map = new google.maps.Map(document.getElementById("map_canvas"),
