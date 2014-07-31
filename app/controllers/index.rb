@@ -1,10 +1,11 @@
-after do
-  ActiveRecord::Base.connection.close
-end
+# after do
+#   ActiveRecord::Base.connection.close
+# end
 
 
 get '/' do
  # render home page
+ @meals = Meal.all
  erb :index
 end
 
@@ -46,7 +47,6 @@ end
 
 get '/users/:id' do
   @user = User.find_by_id(params[:id])
-  @meals = Meal.all
   erb :profile
 end
 
