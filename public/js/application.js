@@ -3,6 +3,9 @@ $(document).ready(function() {
   google.maps.event.addDomListener(window, 'load', initialize);
 });
 
+
+//----------------------BACKGROUND-------------------------
+
 var totalCount = 10;
 function ChangeIt()
 {
@@ -10,14 +13,7 @@ var num = Math.ceil( Math.random() * totalCount );
 document.body.background = '../images/'+num+'.jpg';
 }
 
-// function initialize() {
-//   var mapOptions = {
-//     zoom: 16,
-//     center: new google.maps.LatLng(37.784, -122.397)
-//   };
-//   var map = new google.maps.Map(document.getElementById("map_canvas"),
-//       mapOptions);
-// }
+//----------------------GOOGLE MAPS------------------------
 
 function initialize() {
   var mapOptions = {
@@ -58,13 +54,7 @@ function initialize() {
       map.setCenter(place.geometry.location);
       map.setZoom(17);  // Why 17? Because it looks good.
     }
-    marker.setIcon(/** @type {google.maps.Icon} */({
-      url: place.icon,
-      size: new google.maps.Size(71, 71),
-      origin: new google.maps.Point(0, 0),
-      anchor: new google.maps.Point(17, 34),
-      scaledSize: new google.maps.Size(35, 35)
-    }));
+
     marker.setPosition(place.geometry.location);
     marker.setVisible(true);
 
@@ -92,7 +82,6 @@ function initialize() {
 
   setupClickListener('changetype-all', []);
   setupClickListener('changetype-establishment', ['establishment']);
-  setupClickListener('changetype-geocode', ['geocode']);
 }
 
 
