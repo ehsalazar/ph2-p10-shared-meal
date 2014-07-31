@@ -17,7 +17,6 @@
           <button><a href="/users/<%= meal.user_id %>"><%= User.find(meal.user_id).name %></a></button><br><br><hr>
       <% end %>
   </div>
-
     <input id="pac-input" class="controls" type="text" placeholder="Enter a location">
       <div id="type-selector" class="controls">
         <input type="radio" name="type" id="changetype-all" checked="checked">
@@ -26,7 +25,6 @@
         <label for="changetype-establishment">Establishments</label>
       </div>
     <div id="map_canvas"></div>
-
 <% else %>
   <div class="container">
     <h3>Welcome!</h3>

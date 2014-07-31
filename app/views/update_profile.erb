@@ -13,10 +13,8 @@
         <button><a href="/users/<%= @current_user.id %>">Cancel</a></button>
       </form>
   </div>
-<% else %>
+  <% else %>
   <div class="container">
-      <p>User: <%= @user.name %></p>
-      <p>Bio: <%= @user.bio %></p>
-      <p>Joined: <%= @user.created_at.strftime("%c") %><hr>
+    <h4>Please sign in or up to continue!</h4>
   </div>
 <% end %>

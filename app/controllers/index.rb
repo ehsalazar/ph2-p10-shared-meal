@@ -8,14 +8,3 @@ get '/' do
  @meals = Meal.all
  erb :index
 end
-
-#----------- SESSIONS -----------
-
-
-
-#----------- USERS -----------
-
-
-
-#----------- MEALS -----------
-
