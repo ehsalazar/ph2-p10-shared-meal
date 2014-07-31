@@ -1,3 +1,8 @@
+after do
+  ActiveRecord::Base.connection.close
+end
+
+
 get '/' do
  # render home page
  erb :index

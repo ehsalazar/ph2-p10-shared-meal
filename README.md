@@ -38,9 +38,9 @@ Share the empty seats at your table, be nice and split the bill (or ask for sepa
 
 ### TODOs
 
-  - App has been deployed to Heroku, however:
-    - There are persistent "Internal Server Errors".
-    - Heroku logs indicate ActiveRecord timeouts after 5 seconds.
+  - ~~App has been deployed to Heroku, however:~~
+    - ~~There are persistent "Internal Server Errors".~~
+    - ~~Heroku logs indicate ActiveRecord timeouts after 5 seconds.~~
   - Need to include error handling.
   - Need to continue CSS styling.
   - Need to incorporate Google Maps API.

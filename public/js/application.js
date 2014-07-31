@@ -1,12 +1,12 @@
-// $(document).ready(function() {
-//   ChangeIt();
-// });
+$(document).ready(function() {
+  ChangeIt();
+});
 
-// var totalCount = 5;
-// function ChangeIt()
-// {
-// var num = Math.ceil( Math.random() * totalCount );
-// document.body.background = '../images/'+num+'.jpg';
-// document.body.attr('style', 'no-repeat center center fixed')
-// }
+var totalCount = 10;
+function ChangeIt()
+{
+var num = Math.ceil( Math.random() * totalCount );
+document.body.background = '../images/'+num+'.jpg';
+document.body.attr('style', 'no-repeat center center fixed')
+}
 
