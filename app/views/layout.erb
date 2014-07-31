@@ -6,7 +6,20 @@
   <link rel="stylesheet" href="/css/application.css">
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   <script src="/js/application.js"></script>
-
+  <script type="text/javascript"
+    src="https://maps.googleapis.com/maps/api/js?key=#{ENV['API_KEY']}">
+  </script>
+  <script type="text/javascript">
+  function initialize() {
+    var mapOptions = {
+      zoom: 8,
+      center: new google.maps.LatLng(37.784, -122.397)
+    };
+    var map = new google.maps.Map(document.getElementById('map-canvas'),
+        mapOptions);
+    }
+    google.maps.event.addDomListener(window, 'load', initialize);
+  </script>
   <title></title>
 </head>
 <body>
@@ -31,6 +44,7 @@
   <%= yield %>
 </body>
 </html>
+
 
 
 

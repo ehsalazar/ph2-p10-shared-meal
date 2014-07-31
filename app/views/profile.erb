@@ -28,6 +28,7 @@
           <button><a href="/users/<%= meal.user_id %>"><%= User.find(meal.user_id).name %></a></button><br><br><hr>
       <% end %>
   </div>
+  <div id="map-canvas"></div>
 <% else %>
   <div class="container">
       <h3>Profile</h3>
@@ -39,3 +40,6 @@
       <p><%= @user.created_at.strftime("%c") %></p>
   </div>
 <% end %>
+
+
+
