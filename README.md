@@ -42,7 +42,7 @@ Share the empty seats at your table, be nice and split the bill (or ask for sepa
     - ~~There are persistent "Internal Server Errors".~~
     - ~~Heroku logs indicate ActiveRecord timeouts after 5 seconds.~~
   - Need to include error handling.
-  - Need to continue CSS styling.
+  - ~~Need to continue CSS styling.~~
   - Need to incorporate Google Maps API.
     - A user can see active meals (events) within their general area.
     - A meal (event) can include map information for a specific restaurant or bar.
