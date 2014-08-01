@@ -1,3 +1,7 @@
+after do
+  ActiveRecord::Base.connection.close
+end
+
 get '/users/new' do
   # render sign-up page
   erb :sign_up
