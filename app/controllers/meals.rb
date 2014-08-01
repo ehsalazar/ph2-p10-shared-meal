@@ -1,3 +1,7 @@
+after do
+  ActiveRecord::Base.connection.close
+end
+
 get '/meals/:id' do
   erb :meals
 end

@@ -1,3 +1,7 @@
+after do
+  ActiveRecord::Base.connection.close
+end
+
 get '/sessions/new' do
   # render sign-in page
   erb :sign_in
