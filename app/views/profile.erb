@@ -1,5 +1,15 @@
-<% if current_user %>
+<% if !current_user || current_user.id != @user.id %>
   <div class="container">
+      <h3>Profile</h3>
+      <h3>Name</h3>
+      <p><%= @user.name %></p>
+      <h3>Bio</h3>
+      <p><%= @user.bio %></p>
+      <h3>Joined</h3>
+      <p><%= @user.created_at.strftime("%c") %></p>
+  </div>
+<% else %>
+   <div class="container">
     <h1><%= @current_user.name %></h1>
     <button><a href="/">Active Meals</a></button>
     <button><a href="/users/all">Active Diners</a></button>
@@ -13,18 +23,7 @@
       <h3>Joined</h3>
       <p><%= @current_user.created_at.strftime("%D") %></p>
   </div>
-<% else %>
-  <div class="container">
-      <h3>Profile</h3>
-      <h3>Name</h3>
-      <p><%= @user.name %></p>
-      <h3>Bio</h3>
-      <p><%= @user.bio %></p>
-      <h3>Joined</h3>
-      <p><%= @user.created_at.strftime("%c") %></p>
-  </div>
 <% end %>
-
 
 
 

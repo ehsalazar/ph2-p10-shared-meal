@@ -4,13 +4,6 @@ html, body {
   margin: 0;
 }
 
-#map_canvas {
-  margin: 20px auto;
-  padding: 0px;
-  width: 84%;
-  height: 400px;
-}
-
 body {
   /*background: url(../images/2.jpg) no-repeat center center fixed;*/
   -webkit-background-size: cover;
@@ -47,6 +40,12 @@ nav .brand, nav .brand a {
   color: lightgray;
   width: 60%;
   display: inline-block;
+  text-shadow:
+       3px 3px 0 #000,
+     -1px -1px 0 #000,
+      1px -1px 0 #000,
+      -1px 1px 0 #000,
+       1px 1px 0 #000;
 }
 
 nav ul {
@@ -63,10 +62,12 @@ nav li {
 nav li a {
   color: lightgray;
   text-decoration: none;
-}
-
-nav li a:hover {
-  text-decoration: underline;
+  text-shadow:
+       3px 3px 0 #000,
+     -1px -1px 0 #000,
+      1px -1px 0 #000,
+      -1px 1px 0 #000,
+       1px 1px 0 #000;
 }
 
 form label {
@@ -104,4 +105,58 @@ button {
 button a {
   text-decoration: none;
   color: white;
+}
+
+/*MAP STYLING*/
+
+
+#map_canvas {
+  margin: 20px auto;
+  padding: 0px;
+  width: 84%;
+  height: 400px;
+}
+
+.controls {
+  margin-top: 16px;
+  border: 1px solid transparent;
+  border-radius: 2px 0 0 2px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  height: 32px;
+  outline: none;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+#pac-input {
+  background-color: #fff;
+  padding: 0 11px 0 13px;
+  width: 400px;
+  font-family: Roboto;
+  font-size: 15px;
+  font-weight: 300;
+  text-overflow: ellipsis;
+}
+
+#pac-input:focus {
+  border-color: #4d90fe;
+  margin-left: -1px;
+  padding-left: 14px;  /* Regular padding-left + 1. */
+  width: 401px;
+}
+
+.pac-container {
+  font-family: Roboto;
+}
+
+#type-selector {
+  color: #fff;
+  background-color: #4d90fe;
+  padding: 5px 11px 0px 11px;
+}
+
+#type-selector label {
+  font-family: Roboto;
+  font-size: 13px;
+  font-weight: 300;
 }

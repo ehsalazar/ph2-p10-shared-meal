@@ -5,14 +5,14 @@
       <button><a href="/users/<%= @current_user.id %>">Profile</a></button>
     </div>
   <div class='container'>
-    <h2>Active Diner</h2>
+    <h2>Active Diners</h2>
     <% @users.each do |user| %>
       <h3>Diner</h3>
       <button><a href="/users/<%= user.id %>"><%= user.name %></a></button>
       <h3>Bio</h3>
       <p><%= user.bio %></p>
       <h3>Active Meals</h3>
-      <p><%= user.meals %></p><hr>
+      <p><%= user.meals.count %></p><hr>
     <% end %>
   </div>
 <% else %>

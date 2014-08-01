@@ -8,19 +8,23 @@
   <div class="container">
       <h2>Active Meals</h2>
        <% @meals.each do |meal| %>
-          <h3>Location</h3>
-          <p><%= meal.location %></p>
-          <h3>Date</h3>
-          <p><%= meal.date %></p>
-          <h3>Time</h3>
-          <p><%= meal.time %></p>
-          <h3>Comments</h3>
+          <p><strong>Location: </strong><%= meal.location %><p>
+          <p><strong>Date: </strong><%= meal.date %><p>
+          <p><strong>Time: </strong><%= meal.time %><p>
+          <p><strong>Comments:</strong><p>
           <p><%= meal.comments %></p>
-          <h3>Diner</h3>
+          <p><strong>Diner:</strong></p>
           <button><a href="/users/<%= meal.user_id %>"><%= User.find(meal.user_id).name %></a></button><br><br><hr>
       <% end %>
   </div>
-  <div id="map_canvas"></div>
+    <input id="pac-input" class="controls" type="text" placeholder="Enter a location">
+      <div id="type-selector" class="controls">
+        <input type="radio" name="type" id="changetype-all" checked="checked">
+        <label for="changetype-all">All</label>
+        <input type="radio" name="type" id="changetype-establishment">
+        <label for="changetype-establishment">Establishments</label>
+      </div>
+    <div id="map_canvas"></div>
 <% else %>
   <div class="container">
     <h3>Welcome!</h3>
@@ -32,14 +36,4 @@
   <div class="container"><h3>Explore! Please sign in or up to continue....</h3></div>
 <% end %>
 
-<script type="text/javascript">
-  function initialize() {
-    var mapOptions = {
-      zoom: 15,
-      center: new google.maps.LatLng(37.784, -122.397)
-    };
-    var map = new google.maps.Map(document.getElementById("map_canvas"),
-        mapOptions);
-    }
-    google.maps.event.addDomListener(window, 'load', initialize);
- </script>
+
