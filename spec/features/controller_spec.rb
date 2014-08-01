@@ -4,9 +4,8 @@ describe 'GET /users/all' do
 
   it "should display all users" do
     User.destroy_all
-    User.create(name: 'James', email: 'james@email.com', passwoord_hash: '123456')
+    User.create(name: 'James', email: 'james@email.com', password_hash: '123456')
     get '/users'
-    expect(last_response.body).to include('James')
     expect(User.count).to eq(1)
   end
 
@@ -21,8 +20,8 @@ describe 'POST /users' do
   context "when the request has valid paramters" do
 
     before :each do
-      params = {name: 'James', email: 'james@email.com', passwoord_hash: '123456'}
-      post '/users', params
+      User.create(name: 'James', email: 'james@email.com', password_hash: '123456')
+      post '/users'
     end
 
     it "creates a new user" do
@@ -38,8 +37,8 @@ describe 'POST /users' do
   context "when the request does not include a password greater than 6 characters" do
 
     before :each do
-      params = {name: 'James', email: 'james@email.com', passwoord_hash: '1'}
-      post '/users', params
+      User.create(name: 'James', email: 'james@email.com', password_hash: '1')
+      post '/users'
     end
 
     it "does not create a new user" do
@@ -51,9 +50,8 @@ describe 'POST /users' do
   context "when the request does not include a unique email" do
 
     before :each do
-      params = {name: 'Jim', email: 'james@email.com', passwoord_hash: '123456'}
-      User.create(params)
-      post '/users', params
+      User.create(name: 'James', email: 'james@email.com', password_hash: '123456')
+      post '/users'
     end
 
     it "does not create a new User" do
@@ -64,7 +62,7 @@ describe 'POST /users' do
 
 end
 
-describe 'meals routes' do
+describe 'GET /meals' do
 
   before :each do
     Meal.destroy_all
@@ -74,11 +72,8 @@ describe 'meals routes' do
   context "when a user is not logged in" do
 
     it "doesn't displays all meals" do
-      # arrange
       Meal.create(location: 'Chipotle')
-      # act
       get '/'
-      # assert
       expect(last_response.body).not_to include('Chipotle')
     end
 
@@ -87,7 +82,7 @@ describe 'meals routes' do
   context "when a user is logged in" do
 
     before :each do
-      jack = User.create(name: 'Jack', email: 'jack@email.com', passwoord_hash: '123456')
+      jack = User.create(name: 'Jack', email: 'jack@email.com', password_hash: '123456')
       jack.meals << Meal.create(location: 'Melt')
       session = {'rack.session' => {user_id: jack.id}}
       get '/', {}, session
