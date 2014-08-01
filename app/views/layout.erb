@@ -1,23 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- 
-    normalize.css removes cross-browser differences in defaults, e.g.,
-    differences in how form elements appear between Firefox and IE
-    See: http://necolas.github.com/normalize.css/
-  -->
+  <link href='http://fonts.googleapis.com/css?family=Lato:400,700,900' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="/css/normalize.css">
-  <!--
-    application.css is where you put your styles
-  -->
   <link rel="stylesheet" href="/css/application.css">
-
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   <script src="/js/application.js"></script>
-
+  <script type="text/javascript"
+    src="https://maps.googleapis.com/maps/api/js?libraries=places">
+  </script>
   <title></title>
 </head>
 <body>
+    <div class="containter">
+      <% if @errors%>
+      <p><%= @errors.first %></p>
+      <% end %>
+    </div>
+  <nav>
+    <div class="brand"><a href="/">Shared Meal</a>
+    </div>
+    <ul>
+      <% if current_user %>
+        <li><a href="/sessions/<%= current_user.id %>">Sign Out</a></li>
+      <% else %>
+        <li><a href="/sessions/new">Sign In</a></li>
+        <li><a href="/users/new">Sign Up</a></li>
+      <% end %>
+    </ul>
+  </nav>
+
   <%= yield %>
 </body>
 </html>
+
+
+
+
